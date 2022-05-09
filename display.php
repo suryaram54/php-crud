@@ -22,12 +22,20 @@ include 'connect.php';
   <table class="table">
   <thead>
     <tr>
-      <th scope="col">s.no</th>
+      <th scope="col">id</th>
       <th scope="col">name</th>
       <th scope="col">email</th>
-      <th scope="col">password</th>
       <th scope="col">mobile</th>
-      <th scope="col">operations</th>
+      <th scope="col">skil</th>
+      <th scope="col"> current location</th>
+      <th scope="col">Total EXP</th>
+      <th scope="col">Relevant EXP</th>
+      <th scope="col">Current CTC</th>
+      <th scope="col">Expected CTC</th>
+      <th scope="col">NOtice Period</th>
+      <th scope="col">REsume</th>
+      <th scope="col">Offer</th>
+      <!-- <th scope="col">operations</th> -->
 
     </tr>
   </thead>
@@ -40,17 +48,40 @@ include 'connect.php';
    $id=$row['id'];
    $name=$row['name'];
    $email=$row['email'];
-   $password=$row['password'];
    $mobile=$row['mobile'];
+    
+   $skill=$row['skill'];
+   $location=$row['location'];
+   $Texp=$row['Texp'];
+   $Rexp=$row['Rexp'];
+
+   $CTC=$row['CTC'];
+   $ECTC=$row['ECTC'];
+   $NP=$row['NP'];
+   $offer=$row['offer'];
+   $file=$row['file'];
+  //  print( $image);
+  //  die();
+  //  echo "<img src='images/".$row['imagename']."' >";   
+
    echo'
    <tr>
       <th scope="row">'.$id.'</th>
       <td>'.$name.'</td>
       <td>'.$email.'</td>
-      <td>'.$password.'</td>
       <td>'.$mobile.'</td>
-      <td><button class="btn btn-primary "><a href="update.php?updateid='.$id.'" class="text-light">update</a></button>
-      <button class="btn btn-danger"><a href="delete.php? deleteid='.$id.'"class="text-light">Delete</a></button></td>
+      
+      <td>'.$skill.'</td>
+      <td>'.$location.'</td>
+      <td>'.$Texp.'</td>
+      <td>'.$Rexp.'</td>
+      <td>'.$CTC.'</td>
+      <td>'.$ECTC.'</td>
+      <td>'.$NP.'</td>
+      <td>'.$file.'</td>
+      <td>'.$offer.'</td>
+       
+      
     </tr>
    
    

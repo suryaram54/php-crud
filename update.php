@@ -8,6 +8,7 @@ $name=$row['name'];
 $email=$row['email'];
 $password=$row['password'];
 $mobile=$row['mobile'];
+
 if(isset($_POST['submit']))
 {
  $name=$_POST['name'];

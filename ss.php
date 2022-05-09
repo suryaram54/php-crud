@@ -1,7 +1,11 @@
 <?php
 include "connect.php";
-$id=$_GET['updateid'];
+$id=$_GET['id'];
+// print_r($id);
+// die();
 $sql="select * from `crud` where id=$id";
+// print_r($sql);
+// die();
 
 ?>
 <!DOCTYPE html>

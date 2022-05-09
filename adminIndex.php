@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
   if($result){
     // echo"data inserted successfully";
     // die();
-    header('location:adminIndex.php');
+    header('location:admindata.php');
   }else{
     die(mysqli_error($con));
   }

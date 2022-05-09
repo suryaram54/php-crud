@@ -80,7 +80,7 @@ include 'connect.php';
       <td>'.$NP.'</td>
       <td>'.$file.'</td>
       <td>'.$offer.'</td>
-       
+
       
     </tr>
    

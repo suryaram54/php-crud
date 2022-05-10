@@ -33,7 +33,7 @@ move_uploaded_file($tname,$upload_dir.'/'.$pname);
   if($result){
     // echo"data inserted successfully";
     // die();
-    header('location:ss.php');
+    header('location:display.php');
   }else{
     die(mysqli_error($con));
   }

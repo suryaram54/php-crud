@@ -19,12 +19,18 @@ include 'connect.php';
     $result=mysqli_query($con,$sql);
     if($result){
        while($row=mysqli_fetch_assoc($result)){
+        $id=$row['id'];
+
    $job_title=$row['job_title'];
  
    
-   echo'<p><a href="description.php?updateId='.$job_title.'">'.$job_title.'</a></p>';
+   echo'
+   <ul><li><a href="description.php?updateId='.$id.'">'.$job_title.'</a></p></li></ul>
+   ';
        }
       }
+     
 ?>
+
 </body>
 </html>

@@ -1,28 +1,29 @@
-
 <?php 
 include "connect.php";
+$id=$_GET['updateid'];
+$sql="select * from `admin` where id=$id";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_assoc($result);
+$job_title=$row['job_title'];
+$experience=$row['experience'];
+$skills=$row['skills'];
+$salary=$row['salary'];
+$location=$row['location'];
+$summary=$row['summary'];
 if(isset($_POST['submit']))
 {
  $job_title=$_POST['job_title'];
  $experience=$_POST['experience'];
-//  $password=$_POST['password'];
  $skills=$_POST['skills'];
  $salary=$_POST['salary'];
  $location=$_POST['location'];
  $summary=$_POST['summary'];
  
 
-
-
-
-
- $sql="insert into `admin`(job_title,experience,skills,salary,location,summary)values('$job_title','$experience','$skills','$salary','$location','$summary')";
+ $sql="update `admin` set id=$id,job_title='$job_title',experience='$experience',skills='$skills',salary='$salary',location='$location',summary='$summary' where id=$id";
   $result=mysqli_query($con,$sql);
-  // print($result);
-  // die();
   if($result){
     // echo"data inserted successfully";
-    // die();
     header('location:admindisplay.php');
   }else{
     die(mysqli_error($con));
@@ -33,16 +34,18 @@ if(isset($_POST['submit']))
 
 
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-  <title>Admin</title>
+  <title>crud operations!</title>
   <style>
 /* 
 body {
@@ -58,44 +61,42 @@ form {
 }
   </style>
 </head>
+
 <body>
-  
 <div class="container my-5 " autocomplete="off">
   <h3 style="text-align:center">JOB POST FORM FOR ADMIN</h3>
     <form method="post" enctype="multipart/form-data">
       <div class="form-group">
         <!-- <label>Name</label> -->
-        <input type="text" class="form-control" placeholder="job_title" name="job_title" >
+        <input type="text" class="form-control" placeholder="job_title" name="job_title" value="<?php  echo $job_title;?>">
       </div>
       <div class="form-group">
         <!-- <label>mobile number</label> -->
-        <input type="text" class="form-control" placeholder="Experience" name="experience">
+        <input type="text" class="form-control" placeholder="Experience" name="experience" value="<?php  echo $experience;?>">
       </div>
 
       <div class="form-group">
         <!-- <label>Email</label> -->
-        <input type="text" class="form-control" placeholder="Skills" name="skills" >
+        <input type="text" class="form-control" placeholder="Skills" name="skills" value="<?php  echo $skills;?>">
       </div>
       <div class="form-group">
         <!-- <label>skill </label> -->
-        <input type="text" class="form-control" placeholder="Salary" name="salary">
+        <input type="text" class="form-control" placeholder="Salary" name="salary" value="<?php  echo $salary;?>">
       </div>
       <div class="form-group">
         <!-- <label>mobile number</label> -->
-        <input type="text" class="form-control" placeholder="Location" name="location">
+        <input type="text" class="form-control" placeholder="Location" name="location" value="<?php  echo $location;?>">
       </div>
       <div class="form-group">
         <!-- <label>mobile number</label> -->
-        <textarea rows = "5" cols = "72" name = "summary">
-            Enter your name
-         </textarea>
+        <input type="text" class="form-control" placeholder="Summary" name="summary" value="<?php  echo $summary;?>">
       </div>
       
-      <button type="submit" style="text-align:center  !important"name='submit'class="btn btn-primary" >Submit</button>
+      <button type="submit" style="text-align:center  !important"name='submit'class="btn btn-primary" >Update</button>
     </form>
   </div>
 
 
-
 </body>
+
 </html>

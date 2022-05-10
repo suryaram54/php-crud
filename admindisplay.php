@@ -30,7 +30,7 @@ form {
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
   <button class="btn btn-primary my-5"><a href="adminIndex.php" class="text-light">Add Jobs</a></button>
   <table class="table">
   <thead>

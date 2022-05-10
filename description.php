@@ -26,8 +26,8 @@ $job_title=$row['job_title'];
 $location=$row['location'];
 $experience=$row['experience'];
 
- echo'<h2 style="text-align:center;font-family: Source Sans Pro;">'.$job_title.'</h2>';
- echo'<h2 style="text-align:center;font-family: Source Sans Pro;
+ echo'<h2 style="text-align:center;font-family: Source Sans Pro;padding-top:10px">'.$job_title.'</h2>';
+ echo'<h2 style="text-align:center;font-family: Source Sans Pro;padding-top:10px;padding-bottom:10px;
  ">'.$location.'|'.$experience.' years of experience</h2>';
 
 

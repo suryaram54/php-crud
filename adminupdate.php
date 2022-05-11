@@ -63,7 +63,7 @@ form {
 </head>
 
 <body>
-<div class="container my-5 " autocomplete="off">
+<div class="container my-5 " autocomplete="off"style="font-family: Source Sans Pro;">
   <h3 style="text-align:center">JOB POST FORM FOR ADMIN</h3>
     <form method="post" enctype="multipart/form-data">
       <div class="form-group">
@@ -89,7 +89,9 @@ form {
       </div>
       <div class="form-group">
         <!-- <label>mobile number</label> -->
-        <input type="text" class="form-control" placeholder="Summary" name="summary" value="<?php  echo $summary;?>">
+        <textarea rows = "5" cols = "67" name = "summary">
+          
+         </textarea>
       </div>
       
       <button type="submit" style="text-align:center  !important"name='submit'class="btn btn-primary" >Update</button>

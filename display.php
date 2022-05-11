@@ -17,7 +17,7 @@ include 'connect.php';
 
 </head>
 <body>
-  <div class="container">
+  <div class="container"style="font-family: Source Sans Pro;">
   <button class="btn btn-primary my-5"><a href="user.php" class="text-light">add user</a></button>
   <table class="table">
   <thead>

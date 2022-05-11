@@ -30,7 +30,7 @@ form {
   </style>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid"style="font-family: Source Sans Pro;">
   <button class="btn btn-primary my-5"><a href="adminIndex.php" class="text-light">Add Jobs</a></button>
   <table class="table">
   <thead>

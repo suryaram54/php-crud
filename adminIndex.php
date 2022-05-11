@@ -60,7 +60,7 @@ form {
 </head>
 <body>
   
-<div class="container my-5 " autocomplete="off">
+<div class="container my-5 " autocomplete="off"style="font-family: Source Sans Pro;">
   <h3 style="text-align:center">JOB POST FORM FOR ADMIN</h3>
     <form method="post" enctype="multipart/form-data">
       <div class="form-group">
@@ -86,8 +86,8 @@ form {
       </div>
       <div class="form-group">
         <!-- <label>mobile number</label> -->
-        <textarea rows = "5" cols = "72" name = "summary">
-            Enter your name
+        <textarea rows = "5" cols = "67" name = "summary">
+          
          </textarea>
       </div>
       

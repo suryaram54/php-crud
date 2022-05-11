@@ -73,7 +73,7 @@ form {
 </head>
 
 <body>
-  <div class="container my-5 " autocomplete="off">
+  <div class="container my-5 " autocomplete="off" style="font-family: Source Sans Pro;">
   <h3 style="text-align:center">JOB APPLY FORM FOR CANDIDATE</h3>
     <form method="post" enctype="multipart/form-data">
       <div class="form-group">

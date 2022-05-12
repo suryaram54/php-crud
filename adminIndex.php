@@ -86,7 +86,7 @@ form {
       </div>
       <div class="form-group">
         <!-- <label>mobile number</label> -->
-        <textarea rows = "5" cols = "67" name = "summary">
+        <textarea rows = "4" cols = "67" name = "summary">
           
          </textarea>
       </div>

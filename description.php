@@ -36,7 +36,7 @@ include "connect.php";
 
     ?>
   </div>
-  <div class="container" style="font-family: Source Sans Pro;font-size:18px;-webkit-box-shadow: 1px 2px 5px 1px rgb(0 0 0 / 12%);
+  <div class="container" style="font-family: Source Sans Pro;font-size:18px;box-shadow: 1px 2px 5px 1px rgb(0 0 0 / 12%);
 ">
     <h1 style="color: #0bbff2 !important;font-size:28px;
 ">Job Description</h1>

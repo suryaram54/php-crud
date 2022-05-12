@@ -10,6 +10,7 @@ $skills=$row['skills'];
 $salary=$row['salary'];
 $location=$row['location'];
 $summary=$row['summary'];
+
 if(isset($_POST['submit']))
 {
  $job_title=$_POST['job_title'];
@@ -18,6 +19,7 @@ if(isset($_POST['submit']))
  $salary=$_POST['salary'];
  $location=$_POST['location'];
  $summary=$_POST['summary'];
+
  
 
  $sql="update `admin` set id=$id,job_title='$job_title',experience='$experience',skills='$skills',salary='$salary',location='$location',summary='$summary' where id=$id";
@@ -65,6 +67,7 @@ form {
 <body>
 <div class="container my-5 " autocomplete="off"style="font-family: Source Sans Pro;">
   <h3 style="text-align:center">JOB POST FORM FOR ADMIN</h3>
+  
     <form method="post" enctype="multipart/form-data">
       <div class="form-group">
         <!-- <label>Name</label> -->
@@ -89,7 +92,7 @@ form {
       </div>
       <div class="form-group">
         <!-- <label>mobile number</label> -->
-        <textarea rows = "5" cols = "67" name = "summary">
+        <textarea rows = "4" cols = "67" name = "summary" value="<?php  echo $summary;?>">
           
          </textarea>
       </div>
